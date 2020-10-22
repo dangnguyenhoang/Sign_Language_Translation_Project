@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Your code here -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>VND Classifier</h1>
+        </div>
+    </div>
+ 
+    <div class="row">
+        <div class="col-md-6">
+            <div id="my-camera"></div>
+            <br>
+            <form id="form-capture-image">
+                <div id= "btn-predict-image" class="btn btn-lg btn-primary">Predict Single Word</div>
+                <div id= "btn-predict-video" class="btn btn-lg btn-primary">Translate Realtime</div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div id="results">
+                <h3 id='class-result'>Predictions:</h3>
+ 
+                    <div id="results-prediction">
+                        <p id="prediction"></p>
+                        <p id="probs"></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form>
+                <div class="form-group">
+                  <label>The Result</label>
+                  <input id="history-field" type="text" class="form-control">
+                  <small class="form-text text-muted">History of Translating</small>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
